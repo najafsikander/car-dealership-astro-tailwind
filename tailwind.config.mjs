@@ -9,6 +9,7 @@ export default {
 				nav_link_color: '#212934',
 				custom_red: '#bd162d',
 				custom_blue: '#2364c4',
+				custom_grey: '#666666'
 			}
 		},
 	},
