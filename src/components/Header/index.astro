@@ -1,0 +1,12 @@
+---
+import NewsDisplay from "./NewsDisplay";
+const news: string[] = [
+    'Mar 1: New car models available',
+    'Mar 15: Special discounts on selected models',
+    'Mar 31: Free service for the first year',
+];
+---
+
+<header>
+    <NewsDisplay news={news} client:load/>
+</header>
