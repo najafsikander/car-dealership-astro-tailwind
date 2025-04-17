@@ -1,5 +1,6 @@
 ---
 import InfoArea from "./InfoArea.astro";
+import MainHeader from "./MainHeader.astro";
 import NewsDisplay from "./NewsDisplay";
 const news: string[] = [
     'Mar 1: New car models available',
@@ -11,5 +12,8 @@ const news: string[] = [
 <header>
     <!-- First part of the headers -->
     <NewsDisplay news={news} client:load/>
+    <!-- Second part of the header -->
     <InfoArea/>
+    <!-- Third part of the header -->
+     <MainHeader/>
 </header>

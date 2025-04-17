@@ -1,0 +1,95 @@
+---
+import { Icon } from "astro-icon/components";
+
+const navLinks = [
+  {
+    name: "Home",
+    link: "/",
+    isDropdown: true,
+  },
+  {
+    name: "Inventory",
+    link: "/inventory",
+    isDropdown: false,
+  },
+  {
+    name: "About Us",
+    link: "/about",
+    isDropdown: false,
+  },
+  {
+    name: "Latest Offer",
+    link: "/offer",
+    isDropdown: false,
+  },
+  {
+    name: "Auto News",
+    link: "/news",
+    isDropdown: false,
+  },
+  {
+    name: "Contact",
+    link: "/contact",
+    isDropdown: false,
+  },
+];
+
+const phoneNumber = "(202) 1155-909";
+---
+
+<div
+  class="w-full bg-white text-nav_link_color flex justify-center py-3 text-md"
+>
+  <nav class="w-2/3 flex justify-between py-2">
+    <div class="flex justify-between items-center gap-20">
+      <img src="/imgs/nav-logo.webp" alt="nav-logo" width="120" />
+      <div class="flex justify-evenly items-center gap-7">
+        {
+          navLinks.map((link) => (
+            <div class="flex justify-start items-center gap-1 hover:text-custom_red hover:cursor-pointer text-lg">
+              {link.isDropdown && (
+                <a
+                  href={link.link}
+                  title={link.name}
+                  target="_blank"
+                  rel="noopener noreferer"
+                >
+                  {link.name}
+                </a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="15"
+                  height="15"
+                  fill="currentColor"
+                  class="bi bi-caret-down-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M7.247 11.14 1.403 5.293a.5.5 0 0 1 .707-.707l5.647 5.646 5.646-5.646a.5.5 0 1 1 .707.707l-5.844 5.847a.5.5 0 0 1-.707 0z" />
+                </svg>
+              )}
+              {!link.isDropdown && (
+                <a
+                  href={link.link}
+                  title={link.name}
+                  target="_blank"
+                  rel="noopener noreferer"
+                >
+                  {link.name}
+                </a>
+              )}
+              
+            </div>
+          ))  
+        }
+      </div>
+    </div>
+
+    <a
+      href={`tel:${phoneNumber}`}
+      class="flex justify-center items-center gap-5 text-xl text-white hover:cursor-pointer bg-custom_red px-6 rounded-[3rem] font-bold hover:bg-custom_blue"
+    >
+      <Icon name="line-md:phone" class="text-2xl" />
+      Call {phoneNumber}
+    </a>
+  </nav>
+</div>
