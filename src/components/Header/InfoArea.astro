@@ -1,0 +1,93 @@
+---
+import { Icon } from 'astro-icon/components'
+
+const navlinks = [
+    {
+        name:'32 stimple rd, grand pierce, FL',
+        icon:'material-symbols:location-on-rounded'
+    },
+    {
+        name:'cars@avada-dealers.com',
+        icon:'material-symbols:stacked-email-sharp'
+    },
+    {
+        name:'Monday – Friday: 8am to 9pm',
+        icon:'material-symbols:nest-clock-farsight-analog'
+    }
+];
+
+const socialLinks = [
+    {
+        name:'Facebook',
+        icon:'line-md:facebook',
+        link:'https://www.facebook.com/',
+        css:"bg-custom_blue p-1 rounded-[0.3rem]"
+    },
+    {
+        name:'Instagram',
+        icon:'line-md:instagram',
+        link:'https://www.instagram.com/',
+        css:"p-1 rounded-[0.3rem] bg-custom_pink"
+    },
+    {
+        name:'Twitter',
+        icon:'line-md:twitter-x',
+        link:'https://www.twitter.com/',
+        css:"p-1 rounded-[0.3rem] bg-nav_link_color"
+    },
+    {
+        name:'Youtube',
+        icon:'line-md:youtube',
+        link:'https://www.youtube.com/',
+        css:"p-1 rounded-[0.3rem] bg-custom_red"
+    },
+    {
+        name:'Tiktok',
+        icon:'line-md:tiktok',
+        link:'https://www.tiktok.com/',
+        css:"p-1 rounded-[0.3rem] bg-nav_link_color"
+    }
+    ];
+---
+
+<div class="w-full bg-white text-nav_link_color flex justify-center py-3 text-md">
+    <div class="w-2/3 flex justify-between">
+
+        <!-- Navlinks area -->
+        <div class="flex justify-evenly items-center gap-5">
+            {
+                navlinks.map((link) => (
+                    <div class="flex justify-start items-center gap-1 hover:text-custom_red hover:cursor-pointer">
+                        <Icon name={link.icon}/>
+                        <span class="text-transform: capitalize">{link.name}</span>
+                    </div>
+                ))
+            }
+        </div>
+
+        <!-- Social media area -->
+        <div class="flex justify-evenly items-center gap-3 text-xl hover:cursor-pointer text-white">
+            {
+                socialLinks.map((link) => (
+                    <a title={link.name} href={link.link} target="_blank" rel="noopener noreferrer" class={link.css}>
+                        <Icon name={link.icon}/>
+                    </a>
+                ))
+            }
+            <!-- <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="bg-custom_blue p-1 rounded-[0.3rem]">
+                <Icon name="line-md:facebook"/>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="p-1 rounded-[0.3rem] bg-custom_pink">
+                <Icon name="line-md:instagram"/>
+            </a>
+            <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer" class="p-1 rounded-[0.3rem] bg-nav_link_color">
+                <Icon name="line-md:twitter-x"/>
+            </a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" class="p-1 rounded-[0.3rem] bg-custom_red">
+                <Icon name="line-md:youtube"/>
+            </a>
+            <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" class="p-1 rounded-[0.3rem] bg-nav_link_color">
+                <Icon name="line-md:tiktok"/>
+            </a> -->
+    </div>
+</div>

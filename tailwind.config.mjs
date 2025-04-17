@@ -10,7 +10,8 @@ export default {
 				custom_red: '#bd162d',
 				custom_blue: '#2364c4',
 				custom_grey: '#666666',
-				custom_dark_blue: '#081b36'
+				custom_dark_blue: '#081b36',
+				custom_pink: '#c13584'
 			}
 		},
 	},

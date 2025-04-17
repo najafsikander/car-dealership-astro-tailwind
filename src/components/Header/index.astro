@@ -1,4 +1,5 @@
 ---
+import InfoArea from "./InfoArea.astro";
 import NewsDisplay from "./NewsDisplay";
 const news: string[] = [
     'Mar 1: New car models available',
@@ -8,5 +9,7 @@ const news: string[] = [
 ---
 
 <header>
+    <!-- First part of the headers -->
     <NewsDisplay news={news} client:load/>
+    <InfoArea/>
 </header>
