@@ -1,0 +1,48 @@
+---
+import { Icon } from "astro-icon/components";
+const searchIcon = "material-symbols:search";
+---
+
+<section class="w-full h-[20vh] bg-gray-100 flex justify-center items-start">
+  <!-- Search Card -->
+  <div
+    class="w-2/3 flex justify-center items-center bg-white p-5 shadow-lg relative bottom-10"
+  >
+    <!-- Vertical layout for card contents -->
+    <div class="w-full flex-col justify-center items-center">
+      <!-- Heading & Search Icon -->
+      <div class="flex gap-3 items-center justify-center">
+        <Icon name={searchIcon} class="text-custom_red text-5xl" />
+        <h1 class="text-black font-bold text-3xl">Search Vehicle Inventory</h1>
+      </div>
+      <!-- Search Area - Form -->
+      <div class="w-full flex mt-3 gap-2">
+        <!-- Input 1 -->
+        <input
+          type="text"
+          placeholder="Car Brand/ Model/ Keyword"
+          class="w-full p-3 placeholder-black border border-gray-300 focus:outline-none focus:ring-2 focus:ring-custom_blue"
+        />
+        <!-- Select 1 -->
+        <select
+          class="w-full ml-3 p-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-custom_blue"
+        >
+          <option value="" disabled selected>All Cars</option>
+          <option value="new">New Cars</option>
+          <option value="used">Used Cars</option>
+        </select>
+        <!-- Select 2 -->
+        <select
+          class="w-full ml-3 p-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-custom_blue"
+        >
+          <option value="" disabled selected>Select Body Type</option>
+          <option value="coupe">Coupe</option>
+          <option value="sedan">Sedan</option>
+          <option value="suv">SUV</option>
+        </select>
+        <!-- Button -->
+        <button class="w-[50%] text-white bg-custom_red text-2xl- px-3 py-6">SEARCH</button>
+      </div>
+    </div>
+  </div>
+</section>
