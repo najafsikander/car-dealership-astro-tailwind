@@ -1,0 +1,20 @@
+---
+import Image from "astro/components/Image.astro";
+---
+
+<div class="relative w-full h-full">
+  <Image src="/imgs/inventory/car-1.jpg" alt="car1" width={500} height={500} />
+  <div
+    class="w-[90%] flex flex-col items-start gap-4 bg-white py-4 pl-[7%] pr-4 shadow-lg relative -top-5"
+  >
+    <h2 class="text-2xl font-bold">Audi S4 2020</h2>
+    <p class="text-slate-800 text-lg font-light">
+      18,360 mi • Manual • Petrol • Black
+    </p>
+    <hr class="border-t-1 border-gray-400 w-full" />
+    <p class="text-xl text-slate-800 font-light">
+      Price: <span class="text-3xl font-medium text-custom_red"
+        >$49,950.00</span>
+    </p>
+  </div>
+</div>

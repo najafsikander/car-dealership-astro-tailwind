@@ -1,0 +1,31 @@
+---
+import InventoryItem from '../../../../components/InventoryItem/index.astro';
+---
+
+<section class="w-full h-[30vh] bg-white flex justify-center p-[8vh]">
+  <!-- Vertical Flex Layout -->
+  <div class="flex flex-col items-center">
+    <!-- Top Intro Area -->
+    <div class="w-[80%] flex justify-start items-center gap-36">
+      <h1 class="text-5xl font-bold">Latest Inventory</h1>
+      <p class="text-lg text-gray-600 w-[50%]">
+        Explore our latest vehicle inventory and find your perfect match.
+        Incididunt labore dolore magna aliqua enim veniam quis nostrud tempor
+        tempor adispecing miny exercitation ullamco laboris nisiut aliquip.
+      </p>
+    </div>
+
+    <!-- Inventory Area -->
+    <div class="grid grid-cols-4 grid-rows-2 gap-4 mt-8">
+        <!-- Inventory Item 1 -->
+         <InventoryItem/>
+         <InventoryItem/>
+         <InventoryItem/>
+         <InventoryItem/>
+         <InventoryItem/>
+         <InventoryItem/>
+         <InventoryItem/>
+         <InventoryItem/>
+    </div>
+  </div>
+</section>
