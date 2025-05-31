@@ -1,8 +1,10 @@
 ---
-import InventoryItem from '../../../../components/InventoryItem/index.astro';
+import InventoryItem from "../../../../components/InventoryItem/index.astro";
 ---
 
-<section class="w-full h-[30vh] bg-white flex justify-center p-[8vh]">
+<section
+  class="w-full h-[150%] flex justify-center px-[8vh] pt-[8vh] pb-[20vh]"
+>
   <!-- Vertical Flex Layout -->
   <div class="flex flex-col items-center">
     <!-- Top Intro Area -->
@@ -17,15 +19,24 @@ import InventoryItem from '../../../../components/InventoryItem/index.astro';
 
     <!-- Inventory Area -->
     <div class="grid grid-cols-4 grid-rows-2 gap-4 mt-8">
-        <!-- Inventory Item 1 -->
-         <InventoryItem/>
-         <InventoryItem/>
-         <InventoryItem/>
-         <InventoryItem/>
-         <InventoryItem/>
-         <InventoryItem/>
-         <InventoryItem/>
-         <InventoryItem/>
+      <!-- Inventory Item 1 -->
+      <InventoryItem />
+      <InventoryItem />
+      <InventoryItem />
+      <InventoryItem />
+      <InventoryItem />
+      <InventoryItem />
+      <InventoryItem />
+      <InventoryItem />
+    </div>
+
+    <!-- Bottom Area -->
+    <div class="mb-10 mt-10">
+      <button
+        class="text-black border border-black py-4 px-8 text-lg font-light hover:bg-custom_blue hover:border-custom_blue hover:text-white cursor-pointer"
+      >
+        View More Cars
+      </button>
     </div>
   </div>
 </section>

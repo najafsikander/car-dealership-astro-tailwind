@@ -3,7 +3,19 @@ import Image from "astro/components/Image.astro";
 ---
 
 <div class="relative w-full h-full">
-  <Image src="/imgs/inventory/car-1.jpg" alt="car1" width={500} height={500} />
+  <div class="relative">
+    <Image
+      src="/imgs/inventory/car-1.jpg"
+      alt="car1"
+      width={500}
+      height={500}
+    />
+    <p
+      class="text-white bg-custom_red rounded-[55%] absolute z-10 py-1 px-2 font-light top-6 left-4 text-sm"
+    >
+      SALE!
+    </p>
+  </div>
   <div
     class="w-[90%] flex flex-col items-start gap-4 bg-white py-4 pl-[7%] pr-4 shadow-lg relative -top-5"
   >
@@ -12,9 +24,12 @@ import Image from "astro/components/Image.astro";
       18,360 mi • Manual • Petrol • Black
     </p>
     <hr class="border-t-1 border-gray-400 w-full" />
-    <p class="text-xl text-slate-800 font-light">
-      Price: <span class="text-3xl font-medium text-custom_red"
-        >$49,950.00</span>
-    </p>
+    <div class="flex items-center space-x-2 text-xl text-slate-800 font-light">
+      <span>Price:</span>
+      <span class="text-3xl font-medium text-custom_red">$49,950.00</span>
+      <span class="text-[13px] text-blue-600 border border-blue-600 py-0 px-2">
+        4 % Off
+      </span>
+    </div>
   </div>
 </div>
