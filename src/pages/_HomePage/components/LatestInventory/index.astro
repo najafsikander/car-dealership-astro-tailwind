@@ -1,5 +1,6 @@
 ---
 import InventoryItem from "../../../../components/InventoryItem/index.astro";
+import SectionHeading from "../../../../components/SectionHeading/index.astro";
 ---
 
 <section
@@ -8,14 +9,9 @@ import InventoryItem from "../../../../components/InventoryItem/index.astro";
   <!-- Vertical Flex Layout -->
   <div class="flex flex-col items-center">
     <!-- Top Intro Area -->
-    <div class="w-[80%] flex justify-start items-center gap-36">
-      <h1 class="text-5xl font-bold">Latest Inventory</h1>
-      <p class="text-lg text-gray-600 w-[50%]">
-        Explore our latest vehicle inventory and find your perfect match.
-        Incididunt labore dolore magna aliqua enim veniam quis nostrud tempor
-        tempor adispecing miny exercitation ullamco laboris nisiut aliquip.
-      </p>
-    </div>
+    <SectionHeading
+      heading="Latest Inventory"
+      description="Explore our latest vehicle inventory and find your perfect match. Incididunt labore dolore magna aliqua enim veniam quis nostrud tempor tempor adispecing miny exercitation ullamco laboris nisiut aliquip."/>
 
     <!-- Inventory Area -->
     <div class="grid grid-cols-4 grid-rows-2 gap-4 mt-8">

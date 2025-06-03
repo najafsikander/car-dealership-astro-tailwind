@@ -1,0 +1,83 @@
+---
+import Image from "astro/components/Image.astro";
+import SectionHeading from "../../../../components/SectionHeading/index.astro";
+
+const states = [
+  { name: "Alabama" },
+  { name: "Arizona" },
+  { name: "California" },
+  { name: "Florida" },
+  { name: "Georgia" },
+  { name: "Hawaii" },
+  { name: "Louisiana" },
+];
+---
+
+<section class="w-full h-[70%] flex justify-center px-[8vh] pt-[8vh] pb-[20vh]">
+  <!-- Vertical Flex Layout -->
+  <div class="flex flex-col items-center">
+    <!-- Top Intro Area -->
+    <SectionHeading
+      heading="Dealer Locations"
+      description="Incididunt labore dolore magna aliqua enim veniam quis nostrud tempor tempor adispecing miny exercitation ullamco laboris nisiut aliquip."
+    />
+
+    <!-- Location Area -->
+    <div class="w-full flex flex-row justify-center gap-3 mt-20">
+      <div class="w-1/2 flex flex-row justify-center items-start">
+        <div class="flex flex-col w-2/3">
+          <h1 class="text-3xl">
+            450+ Dealer Locations Across The USA Locate Your Nearest Dealer
+          </h1>
+          <div class="flex flex-row justify-between mt-10">
+            <ul class="list-none p-0">
+              {
+                states.map((state) => (
+                  <li class="flex gap-3 items-center mb-2" >
+                    <div class="w-4 h-4 border-2 border-custom_red rounded-full mr-2" />
+                    <span class="text-lg font-light">
+                      {state.name}
+                    </span>
+                  </li>
+                ))
+              }
+            </ul>
+            <ul class="list-none p-0">
+              {
+                states.map((state) => (
+                  <li class="flex gap-3 items-center mb-2" >
+                    <div class="w-4 h-4 border-2 border-custom_red rounded-full mr-2" />
+                    <span class="text-lg font-light">
+                      {state.name}
+                    </span>
+                  </li>
+                ))
+              }
+            </ul>
+            <ul class="list-none p-0">
+              {
+                states.map((state) => (
+                  <li class="flex gap-3 items-center mb-2" >
+                    <div class="w-4 h-4 border-2 border-custom_red rounded-full mr-2" />
+                    <span class="text-lg font-light">
+                      {state.name}
+                    </span>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="w-1/2 flex flex-row justify-center items-center">
+        <Image
+          src="/imgs/map.webp"
+          loading="lazy"
+          width="600"
+          height="600"
+          alt="map of usa"
+        />
+      </div>
+    </div>
+  </div>
+</section>
