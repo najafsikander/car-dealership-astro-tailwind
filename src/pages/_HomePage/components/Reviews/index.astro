@@ -1,0 +1,25 @@
+---
+import { Icon } from "astro-icon/components";
+import Image from "astro/components/Image.astro";
+---
+
+<section class="w-full h-[17vh] p-4 bg-white flex flex-row items-center justify-center gap-[6%] bg-[url('/imgs/white-arc-bg.webp')] bg-no-repeat bg-[length:90%_auto] bg-left">
+    
+    <!-- The Logo Area -->
+    <div class="w-[30%] flex justify-end">
+        <Image src="/imgs/car-dealer-logo-2.webp" alt="car logo 2" width={150} height={150}/>
+    </div>
+
+    <!-- The Reviews Area -->
+    <div class="flex flex-row gap-[2%] items-center w-[70%]">
+        <h1 class="text-3xl text-black font-bold">Based on 4,500+ reviews</h1>
+    <div class="flex">
+        <Icon name="material-symbols:kid-star-sharp" class="text-2xl text-yellow-500"/>
+        <Icon name="material-symbols:kid-star-sharp" class="text-2xl text-yellow-500"/>
+        <Icon name="material-symbols:kid-star-sharp" class="text-2xl text-yellow-500"/>
+        <Icon name="material-symbols:kid-star-sharp" class="text-2xl text-yellow-500"/>
+        <Icon name="material-symbols:kid-star-sharp" class="text-2xl text-yellow-500"/>
+    </div>
+    <h1 class="text-xl font-light text-gray-500">(Trusted Score 4.8 / 5.0)</h1>
+    </div>
+</section>
