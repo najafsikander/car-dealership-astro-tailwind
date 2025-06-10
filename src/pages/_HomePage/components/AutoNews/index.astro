@@ -1,0 +1,134 @@
+---
+import { Icon } from "astro-icon/components";
+import SectionHeading from "../../../../components/SectionHeading/index.astro";
+import Image from "astro/components/Image.astro";
+---
+
+<section
+  class="w-full h-[100%] flex justify-center px-[8vh] pt-[8vh] pb-[20vh]"
+>
+  <!-- Vertical Flex Layout -->
+  <div class="flex flex-col items-center">
+    <!-- Top Intro Area -->
+    <SectionHeading
+      heading="Auto World News"
+      description="Incididunt labore dolore magna aliqua enim veniam quis nostrud tempor tempor adispecing miny exercitation ullamco laboris nisiut aliquip."
+    />
+
+    <!-- Middle Area -->
+    <div class="w-[80%] h-1/2 flex justify-between gap-10 mt-20">
+
+      <!-- Column 1 -->
+      <div class="relative w-full h-2/3 group">
+        <!-- Image with overlay hover effect -->
+        <div class="relative overflow-hidden">
+          <!-- Actual image -->
+          <Image
+            src="/imgs/news/news1.jpg"
+            alt="news1"
+            width={800}
+            height={800}
+            class="w-full h-auto object-cover"
+          />
+
+          <!-- Hover overlay (slides up) -->
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-custom_dark_blue/80 via-custom_dark_blue/80 to-transparent opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-in-out flex items-center justify-center gap-4"
+          >
+            <!-- Replace with your icons -->
+            <button
+              class="text-white text-xl bg-white/20 hover:bg-white/30 p-3 rounded-full"
+            >
+              🔗
+            </button>
+            <button
+              class="text-white text-xl bg-white/20 hover:bg-white/30 p-3 rounded-full"
+            >
+              🔍
+            </button>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div
+          class="w-[82%] flex flex-col items-start gap-4 bg-white py-4 pl-[7%] pr-4 shadow-lg relative -top-[25%] z-10"
+        >
+          <h2 class="text-2xl font-bold mt-5">
+            Ultimate AWD Hybrid Vehicle Buying Guide for 2024
+          </h2>
+          <p class="text-md text-custom_blue font-light">
+            Tags: Buy Sell Guide, Electric Car
+          </p>
+          <p class="text-slate-800 text-lg font-normal">
+            Incididunt labs dolore mags aliqua enim veniam quis noste miniys exc
+            eation ullamco laboris.
+          </p>
+          <div class="text-custom_red flex items-start gap-1 h-full">
+            <Icon
+              name="material-symbols:chevron-right-rounded"
+              class="text-3xl text-custom_red font-extrabold"
+            />
+            <p>Read More</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Column 2 -->
+      <div class="relative w-full h-2/3 group">
+        <!-- Image with overlay hover effect -->
+        <div class="relative overflow-hidden">
+          <!-- Actual image -->
+          <Image
+            src="/imgs/news/news2.jpg"
+            alt="news2"
+            width={800}
+            height={800}
+            class="w-full h-auto object-cover"
+          />
+
+          <!-- Hover overlay (slides up) -->
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-custom_dark_blue/90 via-custom_dark_blue/90 to-transparent opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-in-out flex items-center justify-center gap-4"
+          >
+            <!-- Replace with your icons -->
+            <button
+              class="text-white text-xl bg-white/20 hover:bg-white/30 p-3 rounded-full"
+            >
+              🔗
+            </button>
+            <button
+              class="text-white text-xl bg-white/20 hover:bg-white/30 p-3 rounded-full"
+            >
+              🔍
+            </button>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div
+          class="w-[82%] flex flex-col items-start gap-4 bg-white py-4 pl-[7%] pr-4 shadow-lg relative -top-[25%] z-10"
+        >
+          <h2 class="text-2xl font-bold mt-5">
+            7 Best Compact SUVs Under $18K Ranked For 2023
+          </h2>
+          <p class="text-md text-custom_blue font-light">
+            Tags: Buy Sell Guide, SUV
+          </p>
+          <p class="text-slate-800 text-lg font-normal">
+            Incididunt labs dolore mags aliqua enim veniam quis noste miniys exc
+            eation ullamco laboris.
+          </p>
+          <div class="text-custom_red flex items-start gap-1 h-full">
+            <Icon
+              name="material-symbols:chevron-right-rounded"
+              class="text-3xl text-custom_red font-extrabold"
+            />
+            <p>Read More</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   
+  </div>
+</section>
