@@ -1,0 +1,91 @@
+---
+import Image from "astro/components/Image.astro";
+---
+<section class="w-full h-[60%] mt-0 p-0 grid grid-cols-3 gap-0">
+  <!-- First Column with gradient overlay -->
+  <div
+    class="relative bg-[url('/imgs/facilities/banner1.jpg')] bg-cover bg-center"
+  >
+    <!-- Gradient Overlay -->
+    <div
+      class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"
+    >
+    </div>
+
+    <!-- Content -->
+    <div
+      class="relative z-10 w-full h-full flex items-center justify-left text-white pl-20"
+    >
+      <div>
+        <Image
+          src="/imgs/car-logo-only.webp"
+          alt={"Main logo only"}
+          width={80}
+          height={80}
+        />
+        <h1 class="mt-4 text-4xl font-bold capitalize">Request a 24 hour</h1>
+        <h1 class="text-4xl font-bold capitalize">Test Drive</h1>
+        <p class="mt-4 capitalize text-lg">pick your car and get instant drive</p>
+        <button class="mt-12 text-lg text-white px-8 py-4 bg-transparent border border-white hover:bg-white hover:text-black hover:cursor-pointer">Start Driving</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Second Column with gradient overlay -->
+  <div
+    class="relative bg-[url('/imgs/facilities/banner2.jpg')] bg-cover bg-center"
+  >
+    <!-- Gradient Overlay -->
+    <div
+      class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"
+    >
+    </div>
+
+    <!-- Content -->
+    <div
+      class="relative z-10 w-full h-full flex items-center justify-left text-white pl-20"
+    >
+      <div>
+        <Image
+          src="/imgs/car-logo-only.webp"
+          alt={"Main logo only"}
+          width={80}
+          height={80}
+        />
+        <h1 class="mt-4 text-4xl font-bold capitalize">Car Workshop</h1>
+        <h1 class="text-4xl font-bold capitalize">Services</h1>
+        <p class="mt-4 capitalize text-lg">All Garage Services Under One Roof</p>
+        <button class="mt-12 text-lg text-white px-8 py-4 bg-transparent border border-white hover:bg-white hover:text-black hover:cursor-pointer">Book Inspection</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Third Column with gradient overlay -->
+  <div
+    class="relative bg-[url('/imgs/facilities/banner3.jpg')] bg-cover bg-center"
+  >
+    <!-- Gradient Overlay -->
+    <div
+      class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"
+    >
+    </div>
+
+    <!-- Content -->
+    <div
+      class="relative z-10 w-full h-full flex items-center justify-left text-white pl-20"
+    >
+      <div>
+        <Image
+          src="/imgs/car-logo-only.webp"
+          alt={"Main logo only"}
+          width={80}
+          height={80}
+        />
+        <h1 class="mt-4 text-4xl font-bold capitalize">Get Instant Cash</h1>
+        <h1 class="text-4xl font-bold capitalize">For Trade-Ins</h1>
+        <p class="mt-4 capitalize text-lg">Fair & Instant Cash Orffer In Minutes</p>
+        <button class="mt-12 text-lg text-white px-8 py-4 bg-transparent border border-white hover:bg-white hover:text-black hover:cursor-pointer">Apply Now</button>
+      </div>
+    </div>
+  </div>
+</section>
