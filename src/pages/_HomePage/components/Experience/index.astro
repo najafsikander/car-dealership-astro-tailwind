@@ -1,5 +1,42 @@
-<section class="w-full h-[30%] bg-white flex justify-center relative">
-    <div class="w-2/3 h-full bg-custom_blue relative top-[4vh]">
-        <h1 class="text-white">Experience</h1>
+---
+import { Icon } from "astro-icon/components";
+const texts:string[] = [
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  "Ipsum dolor sit amet adipiscing elit.",
+  "Phasellus in risus erat sed vel vestibulum turpis.",
+  "Orci varius natoque penatibus et.",
+  "Integer condimentum nisi ac volutpat posuere.",
+];
+---
+
+<section class="w-full h-[37%] bg-white flex justify-center relative">
+  <div class="w-2/3 h-full bg-custom_blue relative top-[6vh]">
+    <div
+      class="w-80% flex flex-row items-center justify-center gap-10 p-[4.5rem] text-white"
+    >
+      <!-- Column 1 -->
+      <div class="w-full text-left">
+        <h1 class="text-4xl capitalize font-black">
+          trusted buying experience
+        </h1>
+        <p class="text-lg font-normal mt-5">
+          Incididunt labore magna aliqua veniams
+        </p>
+        <button class="mt-9 text-lg py-3 px-12 bg-custom_red">Get Start</button>
+      </div>
+      <!-- Column 2 -->
+      <div class="w-full flex flex-col gap-3">
+        {
+          texts.map((text: string) => (
+            <div class="flex gap-5">
+              <Icon name="mingcute:check-2-fill" size={25} />
+              <p class="text-lg font-light">
+                {text}
+              </p>
+            </div>
+          ))
+        }
+      </div>
     </div>
+  </div>
 </section>
