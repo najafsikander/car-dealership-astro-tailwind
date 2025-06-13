@@ -1,3 +1,93 @@
-<footer class="w-full h-[30vh] bg-custom_dark_blue">
-<h1>Footer</h1>
+---
+import { Icon } from "astro-icon/components";
+import Image from "astro/components/Image.astro";
+
+const socialLinks = [
+  {
+    name: "Facebook",
+    icon: "line-md:facebook",
+    link: "https://www.facebook.com/",
+    css: "bg-custom_blue p-1 rounded-[0.3rem]",
+  },
+  {
+    name: "Instagram",
+    icon: "line-md:instagram",
+    link: "https://www.instagram.com/",
+    css: "p-1 rounded-[0.3rem] bg-custom_pink",
+  },
+  {
+    name: "Twitter",
+    icon: "line-md:twitter-x",
+    link: "https://www.twitter.com/",
+    css: "p-1 rounded-[0.3rem] bg-nav_link_color",
+  },
+  {
+    name: "Youtube",
+    icon: "line-md:youtube",
+    link: "https://www.youtube.com/",
+    css: "p-1 rounded-[0.3rem] bg-custom_red",
+  },
+  {
+    name: "Tiktok",
+    icon: "line-md:tiktok",
+    link: "https://www.tiktok.com/",
+    css: "p-1 rounded-[0.3rem] bg-nav_link_color",
+  },
+];
+---
+
+<footer
+  class="w-full h-[80vh] p-5 bg-custom_dark_blue bg-[url('/imgs/right-curve.svg')] bg-no-repeat bg-cover relative"
+>
+  <div
+    class="bg-custom_dark_blue absolute top-0 left-0 w-full h-full opacity-90 flex justify-center p-8"
+  >
+    <!-- First row of footer content -->
+    <div class="flex items-center justify-center w-2/3 h-[20vh] text-white p-4">
+        <div class="basis-1/3">
+            <div class="flex gap-3 items-center">
+                <Icon name="mdi:phone" class="text-4xl"/>
+                <h1 class="text-4xl">Call (202) 1155-909</h1>
+            </div>
+        </div>
+        <div class="basis-1/3 text-center flex justify-center items-center">
+            <Image src={'/imgs/car-logo-3.webp'} alt={'Car logo'} width={'140'} height={'140'}/>
+        </div>
+        <div class="basis-1/3 text-right">
+            <!-- Social media area -->
+    <div
+      class="flex justify-end items-center gap-2 text-xl hover:cursor-pointer text-white"
+    >
+      {
+        socialLinks.map((link) => (
+          <a
+            title={link.name}
+            href={link.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            class={link.css}
+          >
+            <Icon name={link.icon} />
+          </a>
+        ))
+      }
+      <!-- <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="bg-custom_blue p-1 rounded-[0.3rem]">
+                <Icon name="line-md:facebook"/>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="p-1 rounded-[0.3rem] bg-custom_pink">
+                <Icon name="line-md:instagram"/>
+            </a>
+            <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer" class="p-1 rounded-[0.3rem] bg-nav_link_color">
+                <Icon name="line-md:twitter-x"/>
+            </a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" class="p-1 rounded-[0.3rem] bg-custom_red">
+                <Icon name="line-md:youtube"/>
+            </a>
+            <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" class="p-1 rounded-[0.3rem] bg-nav_link_color">
+                <Icon name="line-md:tiktok"/>
+            </a> -->
+    </div>
+        </div>
+    </div>
+  </div>
 </footer>
