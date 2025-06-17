@@ -38,41 +38,50 @@ const socialLinks = [
 
 <!-- TODO:COMPLETE FOOTER TOMORROW -->
 <footer
-  class="w-full h-[80vh] p-5 bg-custom_dark_blue bg-[url('/imgs/right-curve.svg')] bg-no-repeat bg-cover relative"
+  class="w-full h-[50vh] p-5 bg-custom_dark_blue bg-[url('/imgs/right-curve.svg')] bg-no-repeat bg-cover relative"
 >
   <div
     class="bg-custom_dark_blue absolute top-0 left-0 w-full h-full opacity-90 flex justify-center p-8"
   >
-    <!-- First row of footer content -->
-    <div class="flex items-center justify-center w-2/3 h-[20vh] text-white p-4">
+  <!-- Vetical alignment of footer content -->
+    <div class="flex flex-col w-[70%] items-center">
+      <!-- First row of footer content -->
+      <div
+        class="flex items-center justify-center w-full h-[20vh] text-white p-4 mt-20"
+      >
         <div class="basis-1/3">
-            <div class="flex gap-3 items-center">
-                <Icon name="mdi:phone" class="text-4xl"/>
-                <h1 class="text-4xl">Call (202) 1155-909</h1>
-            </div>
+          <div class="flex gap-3 items-center">
+            <Icon name="mdi:phone" class="text-4xl" />
+            <h1 class="text-4xl">Call (202) 1155-909</h1>
+          </div>
         </div>
         <div class="basis-1/3 text-center flex justify-center items-center">
-            <Image src={'/imgs/car-logo-3.webp'} alt={'Car logo'} width={'140'} height={'140'}/>
+          <Image
+            src={"/imgs/car-logo-3.webp"}
+            alt={"Car logo"}
+            width={"140"}
+            height={"140"}
+          />
         </div>
         <div class="basis-1/3 text-right">
-            <!-- Social media area -->
-    <div
-      class="flex justify-end items-center gap-2 text-xl hover:cursor-pointer text-white"
-    >
-      {
-        socialLinks.map((link) => (
-          <a
-            title={link.name}
-            href={link.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            class={link.css}
+          <!-- Social media area -->
+          <div
+            class="flex justify-end items-center gap-2 text-xl hover:cursor-pointer text-white"
           >
-            <Icon name={link.icon} />
-          </a>
-        ))
-      }
-      <!-- <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="bg-custom_blue p-1 rounded-[0.3rem]">
+            {
+              socialLinks.map((link) => (
+                <a
+                  title={link.name}
+                  href={link.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class={link.css}
+                >
+                  <Icon name={link.icon} />
+                </a>
+              ))
+            }
+            <!-- <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="bg-custom_blue p-1 rounded-[0.3rem]">
                 <Icon name="line-md:facebook"/>
             </a>
             <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="p-1 rounded-[0.3rem] bg-custom_pink">
@@ -87,8 +96,33 @@ const socialLinks = [
             <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" class="p-1 rounded-[0.3rem] bg-nav_link_color">
                 <Icon name="line-md:tiktok"/>
             </a> -->
-    </div>
+          </div>
         </div>
+      </div>
+
+      <!-- Divider -->
+      <hr class="border-t-1 border-gray-700 w-full mt-5"/>
+
+      <!-- Second row of footer content -->
+      <div class="flex items-center justify-center w-full h-[15vh] text-q">
+        <ul class="inline-flex w-full justify-around text-white text-lg font-light px-10">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Latest Offers</a></li>
+          <li><a href="#">Car Buying Guide</a></li>
+          <li><a href="#">Workshop Services</a></li>
+          <li><a href="#">Auto News</a></li>
+          <li><a href="#">Investor Relations</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Divider -->
+      <hr class="border-t-1 border-gray-700 w-full"/>
+
+      <!-- Third row of footer content -->
+      <div class="flex items-center justify-center w-full h-[10vh] text-white text-lg font-light px-10 mt-1">
+        <p class="font-light text-[1rem]">© 2012 - 2025 • <span class="text-custom_blue">Avada</span> is a <span class="text-custom_blue">Website Builder</span> for <span class="text-custom_blue">WordPress</span> and <span class="text-custom_blue">eCommerce</span> • All Rights Reserved • Developed by <span class="text-custom_blue">ThemeFusion</span></p>
+      </div>
     </div>
   </div>
 </footer>
